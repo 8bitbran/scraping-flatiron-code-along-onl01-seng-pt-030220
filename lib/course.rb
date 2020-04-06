@@ -7,11 +7,14 @@ class Course
   end
   
   def self.reset_all
-    @@all = @@all.clear 
+    @@all.clear 
   end 
   
   attr_accessor :title, :schedule, :description
   
+  def initialize 
+    @@all << self 
+  end 
   
 end 
 
